@@ -1,10 +1,10 @@
 const net = require("net");
 
 const client = net.createConnection(6969, "localhost", () => {
-    client.write("I am a user!");
-
+    console.log("Welcome! You are now chatting!")
     client.on("date", data => {
         console.log(data.toString());
+        
     });
     process.stdin.pipe(client);
 });
