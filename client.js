@@ -1,6 +1,8 @@
 const net = require("net");
 
-const client = net.createConnection(6969, "52.35.253.174", () => {
+// const client = net.createConnection(6969, "52.35.253.174", () => {
+const client = net.createConnection(6969, "52.39.137.72", () => {
+
     console.log("Welcome! You are now chatting!")
     client.on("date", data => {
         console.log(data.toString());
